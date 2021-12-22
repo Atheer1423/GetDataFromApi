@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FilmTableView.swift
 //  GetDataFromApi
 //
 //  Created by admin on 22/12/2021.
@@ -7,33 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource {
-
+class FilmTableView: UITableViewController {
     var dataFromApi : [data] = []
     var Name = " "
-    @IBOutlet weak var TableViewOutlet: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        TableViewOutlet.dataSource = self
-        getApi(key:"people/")
-        Name = "name"
+        getApi(key:"films/")
+        Name = "title"
     }
-    
-//    @IBAction func FilmBtnPressed(_ sender: UIButton) {
-//        dataFromApi = []
-//        getApi(key:"films/")
-//        Name = "title"
-//    }
-//    @IBAction func PeopleBtnPressed(_ sender: UIButton) {
-//        dataFromApi = []
-//        getApi(key:"people/")
-//        Name = "name"
-//    }
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataFromApi.count
     }
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
          
         cell.textLabel?.text = dataFromApi[indexPath.row].name
@@ -74,12 +61,9 @@ class ViewController: UIViewController,UITableViewDataSource {
          dataFromApi.append(d)
          
          DispatchQueue.main.async {
-             self.TableViewOutlet.reloadData()
+             self.tableView.reloadData()
          }
      }
 }
 
-struct data {
-    var name:String
-}
 

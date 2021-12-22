@@ -13,6 +13,7 @@
 		84E0D377277311C500D7675D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E0D375277311C500D7675D /* Main.storyboard */; };
 		84E0D379277311C600D7675D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E0D378277311C600D7675D /* Assets.xcassets */; };
 		84E0D37C277311C600D7675D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E0D37A277311C600D7675D /* LaunchScreen.storyboard */; };
+		84E0D3842773266F00D7675D /* FilmTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E0D3832773266F00D7675D /* FilmTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		84E0D378277311C600D7675D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E0D37B277311C600D7675D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E0D37D277311C600D7675D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E0D3832773266F00D7675D /* FilmTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				84E0D36F277311C500D7675D /* AppDelegate.swift */,
 				84E0D371277311C500D7675D /* SceneDelegate.swift */,
 				84E0D373277311C500D7675D /* ViewController.swift */,
+				84E0D3832773266F00D7675D /* FilmTableView.swift */,
 				84E0D375277311C500D7675D /* Main.storyboard */,
 				84E0D378277311C600D7675D /* Assets.xcassets */,
 				84E0D37A277311C600D7675D /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E0D374277311C500D7675D /* ViewController.swift in Sources */,
+				84E0D3842773266F00D7675D /* FilmTableView.swift in Sources */,
 				84E0D370277311C500D7675D /* AppDelegate.swift in Sources */,
 				84E0D372277311C500D7675D /* SceneDelegate.swift in Sources */,
 			);

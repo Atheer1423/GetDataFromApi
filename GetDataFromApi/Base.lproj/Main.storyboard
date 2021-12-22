@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fcH-ek-zfz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mn7-Vx-BRe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--People-->
         <scene sceneID="9ZX-ts-KNQ">
             <objects>
                 <viewController id="fcH-ek-zfz" customClass="ViewController" customModule="GetDataFromApi" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kNa-jx-mAJ">
-                                <rect key="frame" x="0.0" y="120" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="rH3-74-UCi">
@@ -33,51 +33,71 @@
                                     <outlet property="dataSource" destination="fcH-ek-zfz" id="Ckk-6h-YRs"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lGa-ZM-Jn5">
-                                <rect key="frame" x="0.0" y="72" width="414" height="38"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAQ-Rv-ah3">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="38"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="People">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="PeopleBtnPressed:" destination="fcH-ek-zfz" eventType="touchUpInside" id="j7b-2B-Myx"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-HS-MaQ">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="38"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Films">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="FilmBtnPressed:" destination="fcH-ek-zfz" eventType="touchUpInside" id="Pab-Ba-giX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sVQ-2V-z7T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sVQ-2V-z7T" firstAttribute="trailing" secondItem="lGa-ZM-Jn5" secondAttribute="trailing" id="9Cn-WD-6Oo"/>
                             <constraint firstItem="sVQ-2V-z7T" firstAttribute="trailing" secondItem="kNa-jx-mAJ" secondAttribute="trailing" id="DaE-pJ-05d"/>
-                            <constraint firstItem="lGa-ZM-Jn5" firstAttribute="leading" secondItem="sVQ-2V-z7T" secondAttribute="leading" id="KF4-Nt-N5y"/>
-                            <constraint firstItem="kNa-jx-mAJ" firstAttribute="top" secondItem="lGa-ZM-Jn5" secondAttribute="bottom" constant="10" id="Spr-X9-G5B"/>
                             <constraint firstItem="kNa-jx-mAJ" firstAttribute="leading" secondItem="sVQ-2V-z7T" secondAttribute="leading" id="bx7-Ae-CMV"/>
                             <constraint firstItem="sVQ-2V-z7T" firstAttribute="bottom" secondItem="kNa-jx-mAJ" secondAttribute="bottom" id="jVz-7S-UUE"/>
-                            <constraint firstItem="lGa-ZM-Jn5" firstAttribute="top" secondItem="sVQ-2V-z7T" secondAttribute="top" constant="28" id="lJV-oE-g3T"/>
+                            <constraint firstItem="kNa-jx-mAJ" firstAttribute="top" secondItem="sVQ-2V-z7T" secondAttribute="top" id="uhi-eN-Bsh"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="People" id="WRx-zl-uey"/>
                     <connections>
                         <outlet property="TableViewOutlet" destination="kNa-jx-mAJ" id="qke-J6-iq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Of5-Fd-6E1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418.84057971014494" y="-30.133928571428569"/>
+            <point key="canvasLocation" x="2342" y="-147"/>
+        </scene>
+        <!--Film-->
+        <scene sceneID="oaL-Os-FOd">
+            <objects>
+                <tableViewController id="D4L-jx-9Gq" customClass="FilmTableView" customModule="GetDataFromApi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nT2-dg-zCA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="rgL-RZ-mE4">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rgL-RZ-mE4" id="qgL-Im-0Rc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D4L-jx-9Gq" id="Xcb-pJ-Nhc"/>
+                            <outlet property="delegate" destination="D4L-jx-9Gq" id="nSN-0g-jkJ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Film" id="XhL-l7-D0e"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5oj-P1-RQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2359" y="560"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jxc-N4-E19">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mn7-Vx-BRe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B8z-Mc-3NO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fcH-ek-zfz" kind="relationship" relationship="viewControllers" id="BeP-BJ-mdJ"/>
+                        <segue destination="D4L-jx-9Gq" kind="relationship" relationship="viewControllers" id="Rok-lX-ai8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kME-YU-Qo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331.8840579710145" y="-146.65178571428569"/>
         </scene>
     </scenes>
     <resources>
